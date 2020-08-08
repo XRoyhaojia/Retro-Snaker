@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body div {
+            float: left;
+        }
+        /* 游戏进行界面的容器 */
+        
+        .container {
+            position: relative;
+            width: 200px;
+            height: 360px;
+            background-color: #000;
+            margin-top: 18px;
+        }
+        /* 下落时的方块 */
+        
+        .activity_model {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: tomato;
+            border: .3px solid #fff;
+            box-sizing: border-box;
+        }
+        /* 着地时的方块 */
+        
+        .fixed_model {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            border: .3px solid #fff;
+            box-sizing: border-box;
+        }
+        /* 左侧游戏菜单界面 */
+        /* 右侧游戏说明界面 */
+        
+        .lalala {
+            width: 200px;
+            height: 360px;
+            flex: 1;
+            margin-top: 18px;
+            margin-left: 480px;
+            border: 1px solid #000;
+            border-right: transparent;
+        }
+        /* 开始游戏 */
+        
+        .bt {
+            display: block;
+            width: 100px;
+            height: 40px;
+            color: white;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgb(93, 64, 224);
+            margin: 50px auto;
+            cursor: pointer;
+        }
+        /* 暂停游戏 */
+        
+        .bt1 {
+            display: block;
+            width: 100px;
+            height: 40px;
+            color: white;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgb(93, 64, 224);
+            margin: 70px auto;
+            cursor: pointer;
+        }
+        
+        h5 {
+            text-align: center;
+        }
+        /* 右侧游戏说明界面 */
+        
+        .lalala1 {
+            width: 220px;
+            height: 360px;
+            flex: 1;
+            margin-top: 18px;
+            border: 1px solid #000;
+            border-left: transparent;
+        }
+        
+        .lalala1 ul {
+            margin-left: -30px;
+        }
+        
+        li {
+            width: 200px;
+            height: 20px;
+            line-height: 20px;
+            list-style: none;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <div class="lalala">
+        <h5>俄罗斯方块</h5>
+        <button id="bt" class="bt">重新开始</button>
+        <button id="bt1" class="bt1">暂停游戏</button>
+
+        <h5>得分：<span id="score">0</span> </h5>
+    </div>
+
+
+
+    <div class="container" id="container">
+    </div>
+
+    <div class="lalala1">
+        <h5>游戏说明</h5>
+        <div class="detail">
+            <ul>
+                <li>下左右分别控制方块的移动</li>
+                <li>上控制方块的旋转</li>
+                <li>空格可以暂停游戏/继续游戏</li>
+                <li>点击重新开始可以重置方块</li>
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+<script src="lodash.min.js"></script>
+<script src="els.js"></script>
+
+</html>
