@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="Utf-8">
+    <meta name="view-port" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+
+</body>
+<script>
+    var t = function() {
+        let a = 1;
+        // let a = 2;  let 在相同作用域内不能重复声明
+
+    }
+
+
+    let [x, y, ...z] = ['a'];
+    console.log(z);
+
+
+    let {
+        baz
+    } = {
+        foo: 'aaa',
+        bar: 'bbb'
+    };
+    console.log(baz);
+    // function f() {
+    //     console.log('I am outside!');
+    // }
+
+    // (function() {
+    //     if (false) {
+    //         // 重复声明一次函数f
+    //         function f() {
+    //             console.log('I am inside!');
+    //         }
+    //     }
+
+    //     f();
+    // }());
+</script>
+
+</html>
